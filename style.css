@@ -4,73 +4,159 @@
     box-sizing: border-box;
     font-size: 16px;
     text-align: center;
+    font-family: "Montserrat", serif;
+    color: rgba(0, 0, 0, 0.5);
 }
-.container {
-    margin: 1rem auto;
+
+main {
+    background-image: linear-gradient(to bottom, #B0D0D3, #DED6D1, #FFCAD4);
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
 h1 {
-    font-family: "Montserrat", serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin: 1rem 0.5rem;
+}
+
+h2 {
+    font-size: 1rem;
     padding: 1rem;
 }
 
 button {
-    border-radius: 20px;
-    padding: 7px 30px;
-    background-color: rgba(247, 243, 243, 0.2);
+    border-radius: 1rem;
+    padding: 0.5rem 2rem;
+    background-color: rgb(247, 243, 243);
     border: 1px solid gray;
+    margin-bottom: 1rem;
+}
+
+#shuffle-btn {
+    display: none;
+}
+
+section {
+    display: none;
 }
 
 .color-container{
-    margin: 3rem auto;
+    margin: 2rem auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 90vw;
-    height: 500px;
+    height: 80vh;
 }
 
 .box {
-    width: 200px;
-    height: 500px;
+    width: 20%;
+    height: 100%;
     color: white;
-    font-family: "Montserrat", serif;
     font-size: 2rem;
-}
-
-#box-1{
-    background-color: #03045e;
-    margin-right: 0.5rem;
-}
-
-#box-2{
-    background-color: #00b4d8;
-    margin-right: 0.5rem;
-}
-
-#box-3{
-    background-color: #edf2f4;
-    margin-right: 0.5rem;
-}
-
-#box-4{
-    background-color: #caf0f8;
-    margin-right: 0.5rem;
-}
-
-#box-5{
-    background-color: #90e0ef;
 }
 
 span {
     display: block;
     position: relative;
     top: 50px;
-    width: 200px;
+    width: 100%;
     height: 60px;
-    background-color: rgba(237, 242, 244, 0.4);
-   
+    background-color: rgba(237, 242, 244, 0.5);
     font-weight: 500;
     padding: 20px;
+    color: #000;
+}
+
+@media only screen and (max-width: 1025px) {
+    span {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 895px) {
+    .color-container{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .box {
+        width: 100%;
+        height: 20%;
+    }
+
+    span {
+        top: 2rem;
+        text-align: left;
+        padding: 0.5rem;
+        height: 2.5rem;
+        width: 150px;
+        background-color: rgba(237, 242, 244, 0.75);
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.75rem;
+        border-radius: 1rem;
+        padding: 0.25rem 1rem;
+    }
+
+    header {
+        margin: auto;
+    }
+}
+
+@media only screen and (max-height: 575px) {
+    span {
+        top: 1rem;
+        height: auto;
+        position: relative;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    h1 {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-height: 400px) {
+    span {
+        height: auto;
+        position: static;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0.2rem;
+        padding: 0;
+    }
+
+    h2 {
+        font-size: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .color-container{
+        margin: 0.5rem auto;
+    }
+}
+
+@media only screen and (max-width: 355px) {
+    h1 {
+        font-size: 0.75rem;
+    }
 }

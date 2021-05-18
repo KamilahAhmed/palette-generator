@@ -1,5 +1,10 @@
 //collecting data from html
-const btn = document.getElementById('btn');
+const startButton = document.getElementById('start-btn');
+const shuffleButton = document.getElementById('shuffle-btn');
+const paletteContainer = document.getElementById('section');
+const infoText = document.getElementById('info-text');
+const header = document.getElementById('header');
+const main = document.getElementById('main');
 const boxOne = document.getElementById('box-1');
 const boxTwo = document.getElementById('box-2');
 const boxThree = document.getElementById('box-3');
@@ -47,6 +52,18 @@ const generateColors = () => {
     spanFive.innerHTML = colorFive;
 }
 
-btn.onclick = () => {
-    generateColors()
-} 
+const updateScreen = () => {
+    startButton.style.display = 'none';
+    shuffleButton.style.display = 'block';
+    infoText.style.display = 'none';
+    header.style.height = '5vh';
+    main.style.height = '95vh';
+    paletteContainer.style.display = 'block';
+    paletteContainer.style.textalign = 'center';
+    main.style.backgroundImage = 'none';
+    header.style.margin = '3rem';
+    generateColors();
+}
+
+startButton.addEventListener("click", updateScreen);
+shuffleButton.addEventListener("click", generateColors);
